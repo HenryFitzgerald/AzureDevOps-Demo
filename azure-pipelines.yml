@@ -15,3 +15,9 @@ stages:
           repository: 'henrydocker1/adodemo1x.azurecr.io'
           command: 'buildAndPush'
           Dockerfile: '**/Dockerfile'
+          tags: '(Build.BuildId)'
+  - stage: ScanImage
+    jobs:
+    - job: ScanImage
+      steps:
+      
